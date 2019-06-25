@@ -11,11 +11,12 @@ Node.js wrapper for the Slic3r-cli plus additional configuration parameters.
 ## Usage
 
 ```
-var nodeSlicer = require('nodeslicer'),
-    options = {
+var nodeSlicer = require('nodeslicer');
+
+var options = {
         inputFile: 'path/to/file'
         // For more options check out the configSchema.yaml file
-    }
+    };
 
 
 nodeSlicer.render(options, function (error, bufferData) {

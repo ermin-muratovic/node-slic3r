@@ -1,4 +1,4 @@
-# NodeSlicer
+# Node.js Slic3r
 
 Node.js wrapper for the Slic3r-cli plus additional configuration parameters.
 

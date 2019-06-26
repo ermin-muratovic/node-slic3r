@@ -1,22 +1,22 @@
 {
-  "name": "nodeslicer",
-  "version": "0.2.0",
+  "name": "node-slic3r",
+  "version": "0.2.1",
   "description": "Node.js wrapper for Slic3r",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adius/nodeslicer.git"
+    "url": "https://github.com/ermin-muratovic/node-slic3r.git"
   },
   "keywords": [
     "slicer",
     "slic3r"
   ],
-  "author": "Adrian Sieber <mail@adriansieber.com>",
+  "author": "Adrian Sieber <mail@adriansieber.com>, Ermin Muratovic <ermin@muratovic.at>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/adius/nodeslicer/issues"
+    "url": "https://github.com/ermin-muratovic/node-slic3r/issues"
   },
-  "homepage": "https://github.com/adius/nodeslicer",
+  "homepage": "https://github.com/ermin-muratovic/node-slic3r",
   "dependencies": {
     "clone": "^0.2.0",
     "js-yaml": "^3.2.5",

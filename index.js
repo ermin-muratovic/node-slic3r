@@ -196,7 +196,7 @@ function getShellCommand (o) {
 		// Miscellaneous options:
 		o.notes ? '--notes ' + o.notes : '',
 		'--resolution ' + o.resolution,
-		'--bed-size ' + o.bedSize.width + ',' + o.bedSize.height,
+		// '--bed-size ' + o.bedSize.width + ',' + o.bedSize.height,
 
 		// Flow options (advanced):
 		'--extrusion-width ' + o.extrusionWidth,
@@ -275,31 +275,28 @@ nodeSlicer.render = function (options, callback) {
 		shellCommand,
 		function (error, stdout, stderr) {
 
+			if (stderr){
+				return callback({ message: stderr })
+			}
+
 			if (error)
 				return callback(error)
 
 			if (useTemporaryOutputFile)
 				fs.readFile(options.outputFile, {}, function (error, data) {
-
-
 					if (error)
 						callback(error)
 
-					else if (!options.header) {
-						// Remove header (54 ascii characters long)
-						// and write file back
-
-						// TODO: Fix this ugly workaround (not easy!)
-
-						return fs.writeFile(
+					else{
+						fs.writeFile(
 							originalOutputFile,
 							data.slice(55),
 							{encoding: 'utf-8'},
-							callback
+							function(){
+								callback(null, data)
+							}
 						)
 					}
-					else
-						callback(null, data)
 
 					fs.unlink(options.outputFile, function (error) {
 						if (error && error.code !== 'ENOENT')

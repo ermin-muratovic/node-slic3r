@@ -1,0 +1,38 @@
+# generated files
+**/bin/
+**/gen/
+**/dist/
+**/docker/
+**/deploy/
+**/_site/
+
+# OSX files
+.DS_Store
+
+# Eclipse project files
+.classpath
+.project
+
+# IntelliJ project files
+*.iml
+.idea
+
+# Visual Studio code files
+.vscode
+
+# Logs
+logs/
+*.log
+npm/
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Test directories
+test-env/
+coverage/
+
+# Optional npm cache directory
+.npm

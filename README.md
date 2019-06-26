@@ -5,13 +5,13 @@ Node.js wrapper for the Slic3r-cli plus additional configuration parameters.
 
 ## Installation
 
-`$ npm install nodeslicer`
+`$ npm install node-slic3r`
 
 
 ## Usage
 
 ```
-var nodeSlicer = require('nodeslicer');
+var nodeSlicer = require('node-slic3r');
 
 var options = {
         inputFile: 'path/to/file'

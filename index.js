@@ -287,16 +287,21 @@ nodeSlicer.render = function (options, callback) {
 					if (error)
 						callback(error)
 
-					else{
-						fs.writeFile(
+					else if (!options.header) {
+						// Remove header (54 ascii characters long)
+						// and write file back
+
+						// TODO: Fix this ugly workaround (not easy!)
+
+						return fs.writeFile(
 							originalOutputFile,
 							data.slice(55),
 							{encoding: 'utf-8'},
-							function(){
-								callback(null, data)
-							}
+							callback
 						)
 					}
+					else
+						callback(null, data)
 
 					fs.unlink(options.outputFile, function (error) {
 						if (error && error.code !== 'ENOENT')

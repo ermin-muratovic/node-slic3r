@@ -1,6 +1,6 @@
 {
   "name": "node-slic3r",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Node.js wrapper for Slic3r",
   "main": "index.js",
   "repository": {

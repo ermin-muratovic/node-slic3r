@@ -111,6 +111,7 @@ properties:
     default: reprap
     enum:
       - reprap
+      - marlin
       - teacup
       - makerware
       - sailfish

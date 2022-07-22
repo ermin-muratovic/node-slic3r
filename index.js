@@ -275,7 +275,7 @@ nodeSlicer.render = function (options, callback) {
 		shellCommand,
 		function (error, stdout, stderr) {
 
-			if (stderr){
+			if (stderr && !stdout){
 				return callback({ message: stderr })
 			}
 
